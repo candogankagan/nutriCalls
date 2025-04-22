@@ -1,0 +1,274 @@
+import { BaseColorType } from '../types/commonTypes';
+
+const LIGHT: BaseColorType = {
+  PRIMARY: { KobeBlue: '#3700BA', KobeGreen: '#33FF85' },
+  SECONDARY: { Orange: '#FE4F2D', Yellow: '#E8E667' },
+  GREEN: {
+    50: '#E9F9F0',
+    100: '#BAECD1',
+    200: '#98E2BB',
+    300: '#69D59C',
+    400: '#4CCD89',
+    500: '#1FC16B',
+    600: '#1CB061',
+    700: '#16894C',
+    800: '#116A3B',
+    900: '#0D512D'
+  },
+  RED: {
+    50: '#FFEBEB',
+    100: '#FEC1C1',
+    200: '#FDA3A3',
+    300: '#FC7979',
+    400: '#FC5F5F',
+    500: '#FB3737',
+    600: '#E43232',
+    700: '#B22727',
+    800: '#8A1E1E',
+    900: '#691717'
+  },
+  ORANGE: {
+    50: '#FFF3EB',
+    100: '#FFD9C0',
+    200: '#FFC7A1',
+    300: '#FFAD76',
+    400: '#FF9D5C',
+    500: '#FF8533',
+    600: '#E8792E',
+    700: '#B55E24',
+    800: '#8C491C',
+    900: '#6B3815'
+  },
+  YELLOW: {
+    50: '#FEF8E9',
+    100: '#FCE8B9',
+    200: '#FBDD98',
+    300: '#F9CD68',
+    400: '#F8C44B',
+    500: '#F6B51E',
+    600: '#E0A51B',
+    700: '#AF8115',
+    800: '#876411',
+    900: '#674C0D'
+  },
+  BLUE: {
+    50: '#EBEFFF',
+    100: '#C0CCFF',
+    200: '#A1B4FF',
+    300: '#7692FF',
+    400: '#5C7DFF',
+    500: '#335CFF',
+    600: '#2E54E8',
+    700: '#2441B5',
+    800: '#1C338C',
+    900: '#15276B'
+  },
+  DARK_BLUE: {
+    50: '#EEEFE0',
+    100: '#C9CBD0',
+    200: '#AFB2B9',
+    300: '#8B8F98',
+    400: '#757985',
+    500: '#525866',
+    600: '#4B505D',
+    700: '#3A3E48',
+    800: '#2D3038',
+    900: '#22252B'
+  },
+  PINK: {
+    50: '#FFEDF6',
+    100: '#FEC7E2',
+    200: '#FDACD5',
+    300: '#FC86C1',
+    400: '#FC6FB5',
+    500: '#FB4BA3',
+    600: '#E44494',
+    700: '#B23574',
+    800: '#8A295A',
+    900: '#692044'
+  },
+  PURPLE: {
+    50: '#F2EEFE',
+    100: '#D7C9FC',
+    200: '#C3AFFA',
+    300: '#A88BF8',
+    400: '#9775F6',
+    500: '#7D52F4',
+    600: '#724BDE',
+    700: '#593AAD',
+    800: '#452D86',
+    900: '#352266'
+  },
+  BG: {
+    WHITE: '#FFFFFF',
+    INPUT_ACTIVE: '#FAF8FF',
+    PRIMARY: '#F0F4F8',
+    DISABLE: '#C3C8D2',
+    BUTTON_DISABLE: '#E1DCED',
+    SOFT: '#A3A8B2',
+    SUB: '#616775',
+    STRONG: '#161B2A',
+    KOBE_BLUE: '#3700BA'
+  },
+  TEXT: {
+    WHITE: '#FFFFFF',
+    DISABLE: '#C3C8D2',
+    SOFT: '#A3A8B2',
+    SUB: '#616775',
+    STRONG: '#161B2A',
+    KOBE_BLUE: '#3700BA'
+  },
+  STROKE: {
+    SOFT: '#A3A8B2',
+    SUB: '#CACFD8',
+    STRONG: '#161B2A',
+    KOBE_BLUE: '#3700BA'
+  },
+  ICON: {
+    WHITE: '#FFFFFF',
+    DISABLE: '#C3C8D2',
+    SOFT: '#A3A8B2',
+    SUB: '#616775',
+    STRONG: '#161B2A',
+    KOBE_BLUE: '#3700BA'
+  }
+};
+
+const DARK: BaseColorType = {
+  PRIMARY: { KobeBlue: '#4A0DE8', KobeGreen: '#2ECC71' },
+  SECONDARY: { Orange: '#FF5733', Yellow: '#FFD700' },
+  GREEN: {
+    50: '#E5F7EC',
+    100: '#B9E8CB',
+    200: '#94DDB2',
+    300: '#61CE8D',
+    400: '#3AC176',
+    500: '#15A95E',
+    600: '#129950',
+    700: '#0F7A3F',
+    800: '#0B5D31',
+    900: '#084725'
+  },
+  RED: {
+    50: '#FFEAEA',
+    100: '#F9BABA',
+    200: '#F59191',
+    300: '#F26060',
+    400: '#EE4949',
+    500: '#E92424',
+    600: '#D12020',
+    700: '#A31A1A',
+    800: '#7D1414',
+    900: '#5E1010'
+  },
+  ORANGE: {
+    50: '#FFEEE4',
+    100: '#FFCDB3',
+    200: '#FFB694',
+    300: '#FF9462',
+    400: '#FF8348',
+    500: '#FF6B20',
+    600: '#E35E1C',
+    700: '#B04716',
+    800: '#8A3712',
+    900: '#692A0E'
+  },
+  YELLOW: {
+    50: '#FEF9E6',
+    100: '#FDE8B5',
+    200: '#FCDC91',
+    300: '#FACB60',
+    400: '#F9BF3F',
+    500: '#F7AB0D',
+    600: '#E0990C',
+    700: '#AD7609',
+    800: '#875D07',
+    900: '#664605'
+  },
+  BLUE: {
+    50: '#E5E9FF',
+    100: '#B2C1FF',
+    200: '#91A6FF',
+    300: '#5F7CFF',
+    400: '#4666FF',
+    500: '#1E44FF',
+    600: '#1B3EE0',
+    700: '#152DB1',
+    800: '#101F87',
+    900: '#0B175F'
+  },
+  DARK_BLUE: {
+    50: '#D1D4DA',
+    100: '#A0A5AF',
+    200: '#7C818D',
+    300: '#4F5561',
+    400: '#393F49',
+    500: '#161A20',
+    600: '#13171C',
+    700: '#101216',
+    800: '#0C0E11',
+    900: '#090A0D'
+  },
+  PINK: {
+    50: '#FFECF5',
+    100: '#FFBED9',
+    200: '#FF9EC6',
+    300: '#FF70AB',
+    400: '#FF589C',
+    500: '#FF2C84',
+    600: '#E62676',
+    700: '#B31D5D',
+    800: '#8C1647',
+    900: '#6A1035'
+  },
+  PURPLE: {
+    50: '#ECE9FD',
+    100: '#C7BEF9',
+    200: '#B2A7F7',
+    300: '#8D7CF3',
+    400: '#7965F1',
+    500: '#5A41EE',
+    600: '#523BDA',
+    700: '#3F2DB0',
+    800: '#31248A',
+    900: '#251C6A'
+  },
+  BG: {
+    WHITE: '#121212',
+    INPUT_ACTIVE: '#1E1E1E',
+    PRIMARY: '#161B22',
+    DISABLE: '#3A3A3A',
+    BUTTON_DISABLE: '#2C2C2C',
+    SOFT: '#5C5C5C',
+    SUB: '#A3A8B2',
+    STRONG: '#E1E1E1',
+    KOBE_BLUE: '#4A0DE8'
+  },
+  TEXT: {
+    WHITE: '#E1E1E1',
+    DISABLE: '#A1A1A1',
+    SOFT: '#C3C8D2',
+    SUB: '#E1E1E1',
+    STRONG: '#FFFFFF',
+    KOBE_BLUE: '#4A0DE8'
+  },
+  STROKE: {
+    SOFT: '#5C5C5C',
+    SUB: '#707070',
+    STRONG: '#E1E1E1',
+    KOBE_BLUE: '#4A0DE8'
+  },
+  ICON: {
+    WHITE: '#E1E1E1',
+    DISABLE: '#A1A1A1',
+    SOFT: '#C3C8D2',
+    SUB: '#5C5C5C',
+    STRONG: '#E1E1E1',
+    KOBE_BLUE: '#4A0DE8'
+  }
+};
+
+export const Colors = {
+  LIGHT,
+  DARK
+};
