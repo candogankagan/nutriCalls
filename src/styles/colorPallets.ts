@@ -1,8 +1,8 @@
-import { BaseColorType } from '../types/commonTypes';
+import {BaseColorType} from '../types/commonTypes';
 
 const LIGHT: BaseColorType = {
-  PRIMARY: { KobeBlue: '#3700BA', KobeGreen: '#33FF85' },
-  SECONDARY: { Orange: '#FE4F2D', Yellow: '#E8E667' },
+  PRIMARY: {KobeBlue: 'purple', KobeGreen: '#33FF85'},
+  SECONDARY: {Orange: '#FE4F2D', Yellow: '#E8E667'},
   GREEN: {
     50: '#E9F9F0',
     100: '#BAECD1',
@@ -13,7 +13,7 @@ const LIGHT: BaseColorType = {
     600: '#1CB061',
     700: '#16894C',
     800: '#116A3B',
-    900: '#0D512D'
+    900: '#0D512D',
   },
   RED: {
     50: '#FFEBEB',
@@ -25,7 +25,7 @@ const LIGHT: BaseColorType = {
     600: '#E43232',
     700: '#B22727',
     800: '#8A1E1E',
-    900: '#691717'
+    900: '#691717',
   },
   ORANGE: {
     50: '#FFF3EB',
@@ -37,7 +37,7 @@ const LIGHT: BaseColorType = {
     600: '#E8792E',
     700: '#B55E24',
     800: '#8C491C',
-    900: '#6B3815'
+    900: '#6B3815',
   },
   YELLOW: {
     50: '#FEF8E9',
@@ -49,7 +49,7 @@ const LIGHT: BaseColorType = {
     600: '#E0A51B',
     700: '#AF8115',
     800: '#876411',
-    900: '#674C0D'
+    900: '#674C0D',
   },
   BLUE: {
     50: '#EBEFFF',
@@ -61,7 +61,7 @@ const LIGHT: BaseColorType = {
     600: '#2E54E8',
     700: '#2441B5',
     800: '#1C338C',
-    900: '#15276B'
+    900: '#15276B',
   },
   DARK_BLUE: {
     50: '#EEEFE0',
@@ -73,7 +73,7 @@ const LIGHT: BaseColorType = {
     600: '#4B505D',
     700: '#3A3E48',
     800: '#2D3038',
-    900: '#22252B'
+    900: '#22252B',
   },
   PINK: {
     50: '#FFEDF6',
@@ -85,7 +85,7 @@ const LIGHT: BaseColorType = {
     600: '#E44494',
     700: '#B23574',
     800: '#8A295A',
-    900: '#692044'
+    900: '#692044',
   },
   PURPLE: {
     50: '#F2EEFE',
@@ -97,7 +97,7 @@ const LIGHT: BaseColorType = {
     600: '#724BDE',
     700: '#593AAD',
     800: '#452D86',
-    900: '#352266'
+    900: '#352266',
   },
   BG: {
     WHITE: '#FFFFFF',
@@ -108,7 +108,7 @@ const LIGHT: BaseColorType = {
     SOFT: '#A3A8B2',
     SUB: '#616775',
     STRONG: '#161B2A',
-    KOBE_BLUE: '#3700BA'
+    KOBE_BLUE: 'purple',
   },
   TEXT: {
     WHITE: '#FFFFFF',
@@ -116,13 +116,13 @@ const LIGHT: BaseColorType = {
     SOFT: '#A3A8B2',
     SUB: '#616775',
     STRONG: '#161B2A',
-    KOBE_BLUE: '#3700BA'
+    KOBE_BLUE: 'purple',
   },
   STROKE: {
     SOFT: '#A3A8B2',
     SUB: '#CACFD8',
     STRONG: '#161B2A',
-    KOBE_BLUE: '#3700BA'
+    KOBE_BLUE: 'purple',
   },
   ICON: {
     WHITE: '#FFFFFF',
@@ -130,13 +130,13 @@ const LIGHT: BaseColorType = {
     SOFT: '#A3A8B2',
     SUB: '#616775',
     STRONG: '#161B2A',
-    KOBE_BLUE: '#3700BA'
-  }
+    KOBE_BLUE: 'purple',
+  },
 };
 
 const DARK: BaseColorType = {
-  PRIMARY: { KobeBlue: '#4A0DE8', KobeGreen: '#2ECC71' },
-  SECONDARY: { Orange: '#FF5733', Yellow: '#FFD700' },
+  PRIMARY: {KobeBlue: '#4A0DE8', KobeGreen: '#2ECC71'},
+  SECONDARY: {Orange: '#FF5733', Yellow: '#FFD700'},
   GREEN: {
     50: '#E5F7EC',
     100: '#B9E8CB',
@@ -147,7 +147,7 @@ const DARK: BaseColorType = {
     600: '#129950',
     700: '#0F7A3F',
     800: '#0B5D31',
-    900: '#084725'
+    900: '#084725',
   },
   RED: {
     50: '#FFEAEA',
@@ -159,7 +159,7 @@ const DARK: BaseColorType = {
     600: '#D12020',
     700: '#A31A1A',
     800: '#7D1414',
-    900: '#5E1010'
+    900: '#5E1010',
   },
   ORANGE: {
     50: '#FFEEE4',
@@ -171,7 +171,7 @@ const DARK: BaseColorType = {
     600: '#E35E1C',
     700: '#B04716',
     800: '#8A3712',
-    900: '#692A0E'
+    900: '#692A0E',
   },
   YELLOW: {
     50: '#FEF9E6',
@@ -183,7 +183,7 @@ const DARK: BaseColorType = {
     600: '#E0990C',
     700: '#AD7609',
     800: '#875D07',
-    900: '#664605'
+    900: '#664605',
   },
   BLUE: {
     50: '#E5E9FF',
@@ -195,7 +195,7 @@ const DARK: BaseColorType = {
     600: '#1B3EE0',
     700: '#152DB1',
     800: '#101F87',
-    900: '#0B175F'
+    900: '#0B175F',
   },
   DARK_BLUE: {
     50: '#D1D4DA',
@@ -207,7 +207,7 @@ const DARK: BaseColorType = {
     600: '#13171C',
     700: '#101216',
     800: '#0C0E11',
-    900: '#090A0D'
+    900: '#090A0D',
   },
   PINK: {
     50: '#FFECF5',
@@ -219,7 +219,7 @@ const DARK: BaseColorType = {
     600: '#E62676',
     700: '#B31D5D',
     800: '#8C1647',
-    900: '#6A1035'
+    900: '#6A1035',
   },
   PURPLE: {
     50: '#ECE9FD',
@@ -231,8 +231,9 @@ const DARK: BaseColorType = {
     600: '#523BDA',
     700: '#3F2DB0',
     800: '#31248A',
-    900: '#251C6A'
+    900: '#251C6A',
   },
+
   BG: {
     WHITE: '#121212',
     INPUT_ACTIVE: '#1E1E1E',
@@ -242,7 +243,7 @@ const DARK: BaseColorType = {
     SOFT: '#5C5C5C',
     SUB: '#A3A8B2',
     STRONG: '#E1E1E1',
-    KOBE_BLUE: '#4A0DE8'
+    KOBE_BLUE: 'purple',
   },
   TEXT: {
     WHITE: '#E1E1E1',
@@ -250,13 +251,13 @@ const DARK: BaseColorType = {
     SOFT: '#C3C8D2',
     SUB: '#E1E1E1',
     STRONG: '#FFFFFF',
-    KOBE_BLUE: '#4A0DE8'
+    KOBE_BLUE: 'purple',
   },
   STROKE: {
     SOFT: '#5C5C5C',
     SUB: '#707070',
     STRONG: '#E1E1E1',
-    KOBE_BLUE: '#4A0DE8'
+    KOBE_BLUE: 'purple',
   },
   ICON: {
     WHITE: '#E1E1E1',
@@ -264,11 +265,11 @@ const DARK: BaseColorType = {
     SOFT: '#C3C8D2',
     SUB: '#5C5C5C',
     STRONG: '#E1E1E1',
-    KOBE_BLUE: '#4A0DE8'
-  }
+    KOBE_BLUE: 'purple',
+  },
 };
 
 export const Colors = {
   LIGHT,
-  DARK
+  DARK,
 };

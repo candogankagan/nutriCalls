@@ -1,14 +1,9 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import LottieView from 'lottie-react-native';
-import Assets from '@/assets';
 
 const Loader = () => {
-  return (
-    <View style={styles.container}>
-      <LottieView source={Assets.LoadingJSON} autoPlay loop style={styles.animation} />
-    </View>
-  );
+  return <View style={styles.container}></View>;
 };
 
 const styles = StyleSheet.create({
@@ -21,9 +16,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(34, 37, 43, 0.5)'
+    backgroundColor: 'rgba(34, 37, 43, 0.5)',
   },
-  animation: { width: 72, height: 72 }
+  animation: {width: 72, height: 72},
 });
 
 export default Loader;

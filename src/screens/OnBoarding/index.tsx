@@ -1,5 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import {View, StyleSheet, Image, BackHandler} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Image,
+  BackHandler,
+  ImageBackground,
+} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import OnBoardingFirst from './OnBoardingFirst';
 import OnBoardingSecond from './OnBoardingSecond';
@@ -39,11 +45,9 @@ export default function Index() {
   const CurrentStepComponent = steps[step as keyof typeof steps];
 
   return (
-    <View style={styles.page}>
-      <Image
-        style={styles.image}
-        source={images[step as keyof typeof images]}
-      />
+    <ImageBackground
+      style={styles.page}
+      source={require('../../assets/images/landingBackground.png')}>
       <View style={styles.header}>
         <View style={styles.progressBar}>
           <View style={styles.progressLine}>
@@ -75,7 +79,7 @@ export default function Index() {
         </View>
       </View>
       <CurrentStepComponent step={step} setStep={setStep} />
-    </View>
+    </ImageBackground>
   );
 }
 
@@ -110,14 +114,14 @@ const styles = StyleSheet.create({
   },
   progressLine: {position: 'relative'},
   gray: {
-    backgroundColor: 'gray',
+    backgroundColor: 'white',
     width: normalize(115, 'width'),
     height: normalize(4, 'height'),
     borderRadius: normalize(999),
   },
   red: {
     position: 'absolute',
-    backgroundColor: 'red',
+    backgroundColor: 'purple',
     width: normalize(0, 'width'),
     height: normalize(4, 'height'),
     borderRadius: normalize(999),
