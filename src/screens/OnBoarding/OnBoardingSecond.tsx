@@ -23,19 +23,19 @@ const OnBoardingSecond = ({step, setStep}: OnBoardingProps) => {
         color="#fff"
       />
       <Image
-        source={require('../../assets/images/first.png')}
+        source={require('../../assets/images/onboardSecond.png')}
         style={{
           position: 'absolute',
           bottom: '18%',
           padding: normalize(4),
           borderRadius: 30,
-          width: SCREEN_WIDTH,
-          height: SCREEN_HEIGHT * 0.5,
-          resizeMode: 'stretch',
+          width: SCREEN_WIDTH * 0.95,
+          height: SCREEN_HEIGHT * 0.4,
+          resizeMode: 'cover',
         }}
       />
       <View style={{position: 'absolute', bottom: normalize(30)}}>
-        <Button label="Let's start" onPress={() => setStep(step + 1)} />
+        <Button label="Continue" onPress={() => setStep(step + 1)} />
       </View>
     </View>
   );
