@@ -8,6 +8,7 @@ import {
   Dimensions,
   SafeAreaView,
   ImageBackground,
+  Image,
 } from 'react-native';
 import {styles} from './LandingScreenStyle';
 
@@ -15,9 +16,10 @@ const {width} = Dimensions.get('window');
 
 // Her adımın tipi ve içeriği
 type Step = {
-  type: 'input' | 'select';
+  type: 'input' | 'select' | 'date';
   title: string;
   options?: string[];
+  multiSelect?: boolean;
 };
 
 // Adımların listesi
@@ -54,9 +56,27 @@ const steps: Step[] = [
     title: 'What is your physical activity level ?',
     options: ['Not very active', 'Less active', 'Active', 'Very active'],
   },
+  {
+    type: 'date',
+    title: "What's your birthday?",
+  },
+  {
+    type: 'select',
+    title: 'Please, tell us about yourself',
+    options: ['Male', 'Female'],
+  },
+  {
+    type: 'select',
+    title: 'Have you ever had a professional nutritional support before ?',
+    options: ['YES', 'NO'],
+  },
+  {
+    type: 'input',
+    title: 'When are you more available for video calling to your nutritionist ?',
+  },
 ];
 
-const LandingScreen = () => {
+const LandingScreen = ({navigation}: any) => {
   const flatListRef = useRef<FlatList>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
@@ -67,7 +87,8 @@ const LandingScreen = () => {
       setCurrentIndex(prev => prev + 1);
     } else {
       console.log('Completed! Answers:', answers);
-      // Burası tamamlandığında yapılacak işlemler (API'ye gönderme vs.)
+      // Navigate to Welcome screen after completing the survey
+      navigation.navigate('Welcome');
     }
   };
 
@@ -88,14 +109,59 @@ const LandingScreen = () => {
 
       {item.type === 'input' ? (
         <View style={styles.itemContainer}>
-          <Text style={styles.text}>Preferred Name</Text>
+          {index === 0 ? (
+            <Text style={styles.text}>Preferred Name</Text>
+          ) : null}
 
           <TextInput
-            placeholder="Preferred Name"
+            placeholder={index === 0 ? "Preferred Name" : "Enter your answer"}
             style={styles.input}
             value={answers[index] || ''}
             onChangeText={text => handleSelect(index, text)}
+            multiline={index === steps.length - 1}
+            numberOfLines={index === steps.length - 1 ? 4 : 1}
           />
+        </View>
+      ) : item.type === 'date' ? (
+        <View style={styles.dateContainer}>
+          <View style={styles.dateRow}>
+            <TextInput
+              placeholder="DD"
+              style={styles.dateInput}
+              keyboardType="number-pad"
+              maxLength={2}
+              value={answers[index]?.split(' ')[0] || ''}
+              onChangeText={day => {
+                const month = answers[index]?.split(' ')[1] || '';
+                const year = answers[index]?.split(' ')[2] || '';
+                handleSelect(index, `${day} ${month} ${year}`);
+              }}
+            />
+            <TextInput
+              placeholder="MM"
+              style={styles.dateInput}
+              keyboardType="number-pad"
+              maxLength={2}
+              value={answers[index]?.split(' ')[1] || ''}
+              onChangeText={month => {
+                const day = answers[index]?.split(' ')[0] || '';
+                const year = answers[index]?.split(' ')[2] || '';
+                handleSelect(index, `${day} ${month} ${year}`);
+              }}
+            />
+            <TextInput
+              placeholder="YYYY"
+              style={styles.dateInput}
+              keyboardType="number-pad"
+              maxLength={4}
+              value={answers[index]?.split(' ')[2] || ''}
+              onChangeText={year => {
+                const day = answers[index]?.split(' ')[0] || '';
+                const month = answers[index]?.split(' ')[1] || '';
+                handleSelect(index, `${day} ${month} ${year}`);
+              }}
+            />
+          </View>
         </View>
       ) : (
         <View style={styles.itemContainer}>
@@ -129,13 +195,13 @@ const LandingScreen = () => {
             {justifyContent: currentIndex > 0 ? 'space-between' : 'center'},
           ]}>
           {currentIndex > 0 && (
-            <Text
-              onPress={handlePrev}
-              style={[styles.navText, styles.backbutton]}>
-              ⬅
-            </Text>
+            <TouchableOpacity onPress={handlePrev}>
+              <Image
+                source={require('../../assets/images/leftArrow.png')}
+                style={{width: 35, height: 35}}
+              />
+            </TouchableOpacity>
           )}
-
           <TouchableOpacity onPress={handleNext} style={styles.navButton}>
             <Text style={styles.navText}>Next</Text>
           </TouchableOpacity>

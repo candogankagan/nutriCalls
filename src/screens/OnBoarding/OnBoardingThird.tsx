@@ -8,22 +8,27 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AuthStackParamList} from '../../navigation/AuthNavigator';
 
-const OnBoardingSecond = ({step, setStep}: OnBoardingProps) => {
+const OnBoardingThird = ({step, setStep}: OnBoardingProps) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
   return (
     <View style={styles.container}>
       <Image
         source={require('../../assets/images/logo.png')}
-        style={{width: 100, height: 100, resizeMode: 'contain'}}
+        style={{
+          width: 100,
+          height: 100,
+          resizeMode: 'contain',
+          marginBottom: normalize(30),
+        }}
       />
       <CoreText
         customStyle={{
-          marginTop: normalize(20),
           marginBottom: normalize(10),
           paddingHorizontal: normalize(16),
+          textAlign: 'center',
         }}
-        text="Save and track Meals with airtifical intelligence tools ."
+        text="Save and track your meals with artificial intelligence tools."
         variant="headingLarge/semiBold"
         color="#fff"
       />
@@ -49,7 +54,7 @@ const OnBoardingSecond = ({step, setStep}: OnBoardingProps) => {
   );
 };
 
-export default OnBoardingSecond;
+export default OnBoardingThird;
 
 const styles = StyleSheet.create({
   container: {

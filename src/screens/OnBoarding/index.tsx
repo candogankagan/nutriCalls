@@ -47,7 +47,7 @@ export default function Index() {
   return (
     <ImageBackground
       style={styles.page}
-      source={require('../../assets/images/landingBackground.png')}>
+      source={require('../../assets/images/background.png')}>
       <View style={styles.header}>
         <View style={styles.progressBar}>
           <View style={styles.progressLine}>

@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
   page: {
     width,
     backgroundColor: '#fff',
-    paddingHorizontal: 10,
     paddingTop: 40,
     justifyContent: 'space-between',
   },
@@ -16,6 +15,9 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   title: {
+    marginTop: 30,
+    paddingHorizontal: 10,
+
     width: '80%',
     fontSize: 25,
     fontWeight: 'bold',
@@ -23,6 +25,7 @@ export const styles = StyleSheet.create({
     color: '#333',
   },
   itemContainer: {
+    paddingHorizontal: 10,
     height: '60%',
     justifyContent: 'center',
   },
@@ -36,7 +39,7 @@ export const styles = StyleSheet.create({
     borderRadius: 99,
   },
   background: {
-    flex: 0.5,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -70,23 +73,47 @@ export const styles = StyleSheet.create({
     fontSize: 16,
   },
   navigation: {
-    width: '100%',
+    width: '90%',
     paddingHorizontal: 20,
     flexDirection: 'row',
     marginTop: 30,
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   navButton: {
     justifyContent: 'center',
-    height: 50,
-    paddingHorizontal: 70,
+    paddingHorizontal: 40,
     backgroundColor: '#fff',
-    elevation: 10,
     borderRadius: 99,
-    padding: 10,
+    paddingVertical: 6,
   },
   navText: {
     color: '#800080',
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  dateContainer: {
+    paddingHorizontal: 10,
+    height: '60%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  dateRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  dateInput: {
+    textAlign: 'center',
+    borderWidth: 1,
+    borderColor: '#D8D8D8',
+    marginHorizontal: 5,
+    borderRadius: 5,
+    fontSize: 16,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    color: '#000',
+    width: 80,
   },
 });

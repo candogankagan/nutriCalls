@@ -5,20 +5,24 @@ import {OnBoardingProps} from '.';
 import Button from '../../components/Core/Button';
 import {CoreText} from '../../components';
 
-const OnBoardingSecond = ({step, setStep}: OnBoardingProps) => {
+const OnBoardingFirst = ({step, setStep}: OnBoardingProps) => {
   return (
     <View style={styles.container}>
       <Image
         source={require('../../assets/images/logo.png')}
-        style={{width: 100, height: 100, resizeMode: 'contain'}}
+        style={{
+          width: 100,
+          height: 100,
+          resizeMode: 'contain',
+          marginBottom: normalize(30),
+        }}
       />
       <CoreText
         customStyle={{
-          marginTop: normalize(20),
           marginBottom: normalize(10),
           paddingHorizontal: normalize(16),
         }}
-        text="Hello !"
+        text="Hello!"
         variant="headingLarge/semiBold"
         color="#fff"
       />
@@ -41,7 +45,7 @@ const OnBoardingSecond = ({step, setStep}: OnBoardingProps) => {
   );
 };
 
-export default OnBoardingSecond;
+export default OnBoardingFirst;
 
 const styles = StyleSheet.create({
   container: {

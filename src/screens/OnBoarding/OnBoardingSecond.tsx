@@ -10,15 +10,20 @@ const OnBoardingSecond = ({step, setStep}: OnBoardingProps) => {
     <View style={styles.container}>
       <Image
         source={require('../../assets/images/logo.png')}
-        style={{width: 100, height: 100, resizeMode: 'contain'}}
+        style={{
+          width: 100,
+          height: 100,
+          resizeMode: 'contain',
+          marginBottom: normalize(30),
+        }}
       />
       <CoreText
         customStyle={{
-          marginTop: normalize(20),
           marginBottom: normalize(10),
           paddingHorizontal: normalize(16),
+          textAlign: 'center',
         }}
-        text="Chose your nutritionist and plan your videocall"
+        text="Choose your nutritionist and plan your videocall."
         variant="headingLarge/semiBold"
         color="#fff"
       />
