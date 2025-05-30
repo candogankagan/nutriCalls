@@ -1,35 +1,35 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '../screens/HomeScreen';
+import NutritionistSelection from '../screens/NutritionistSelection/NutritionistSelection';
+import PreCallPlan from '../screens/NutritionistSelection/PreCallPlan';
+import AppointmentScheduling from '../screens/AppointmentScheduling/AppointmentScheduling';
+import NutritionistLanding from '../screens/NutritionistSelection/NutritionistLanding';
 
 export type HomeStackParamList = {
   Home: undefined;
+  NutritionistSelection: undefined;
+  NutritionistLanding: undefined;
+  PreCallPlan: {nutritionist: any};
+  AppointmentScheduling: {nutritionist: any};
 };
 
 const HomeStack = createNativeStackNavigator<HomeStackParamList>();
 function HomeStackNavigator() {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={HomeScreen} />
-    </HomeStack.Navigator>
-  );
-}
-
-export type AppTabParamList = {
-  HomeTab: undefined;
-};
-
-const Tab = createBottomTabNavigator<AppTabParamList>();
-
-export default function AppNavigator() {
-  return (
-    <Tab.Navigator initialRouteName="HomeTab">
-      <Tab.Screen
-        name="HomeTab"
-        component={HomeStackNavigator}
-        options={{title: 'Ana Sayfa'}}
+    <HomeStack.Navigator screenOptions={{headerShown: false}}>
+      <HomeStack.Screen
+        name="NutritionistLanding"
+        component={NutritionistLanding}
       />
-    </Tab.Navigator>
+      <HomeStack.Screen
+        name="NutritionistSelection"
+        component={NutritionistSelection}
+      />
+      <HomeStack.Screen name="PreCallPlan" component={PreCallPlan} />
+      <HomeStack.Screen
+        name="AppointmentScheduling"
+        component={AppointmentScheduling}
+      />
+    </HomeStack.Navigator>
   );
 }
