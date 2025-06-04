@@ -8,7 +8,6 @@ import LoginScreen from '../screens/Auth/LoginScreen';
 import NutritionistSelection from '../screens/NutritionistSelection/NutritionistSelection';
 import PreCallPlan from '../screens/NutritionistSelection/PreCallPlan';
 import AppointmentScheduling from '../screens/AppointmentScheduling/AppointmentScheduling';
-import HomeScreen from '../screens/HomeScreen';
 import NutritionistLanding from '../screens/NutritionistSelection/NutritionistLanding';
 import TimeSlotSelection from '../screens/AppointmentScheduling/TimeSlotSelection';
 import AppointmentConfirmation from '../screens/AppointmentScheduling/AppointmentConfirmation';
@@ -23,7 +22,7 @@ export type AuthStackParamList = {
   NutritionistSelection: undefined;
   PreCallPlan: {nutritionist: any};
   AppointmentScheduling: {nutritionist: any};
-  Home: undefined;
+
   NutritionistLanding: undefined;
   TimeSlotSelection: {selectedDates: number[]; nutritionist: any};
   AppointmentConfirmation: {
@@ -36,13 +35,15 @@ export type AuthStackParamList = {
 const Stack = createNativeStackNavigator<AuthStackParamList>();
 
 export default function AuthNavigator() {
+  console.log('AuthNavigator');
+
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      {/* <Stack.Screen name="OnBoarding" component={OnBoarding} />
+      <Stack.Screen name="OnBoarding" component={OnBoarding} />
       <Stack.Screen name="Landing" component={LandingScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="SignUp" component={SignUpScreen} />
-      <Stack.Screen name="Login" component={LoginScreen} /> */}
+      <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen
         name="NutritionistLanding"
         component={NutritionistLanding}
@@ -61,7 +62,6 @@ export default function AuthNavigator() {
         name="AppointmentConfirmation"
         component={AppointmentConfirmation}
       />
-      <Stack.Screen name="Home" component={HomeScreen} />
     </Stack.Navigator>
   );
 }

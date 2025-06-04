@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import {setIsLoggedIn} from '../../store/slices/authSlicer';
 import {
   View,
   Text,
@@ -21,6 +23,7 @@ const AppointmentConfirmation: React.FC<AppointmentConfirmationProps> = ({
 }) => {
   const {selectedDates, selectedTimeSlots, nutritionist} = route.params;
   const [isConfirmed, setIsConfirmed] = useState(false);
+  const dispatch = useDispatch();
 
   // Format date for display
   const formatDateWithTime = (date: number, timeSlot: any) => {
@@ -84,7 +87,9 @@ const AppointmentConfirmation: React.FC<AppointmentConfirmationProps> = ({
 
         <TouchableOpacity
           style={styles.homeButton}
-          onPress={() => navigation.navigate('Home')}>
+          onPress={() => {
+            dispatch(setIsLoggedIn(true));
+          }}>
           <Text style={styles.homeButtonText}>Go to Home</Text>
         </TouchableOpacity>
       </View>

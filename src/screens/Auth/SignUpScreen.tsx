@@ -28,7 +28,7 @@ const SignUpScreen = () => {
     // Implement sign up logic
     console.log('Sign up with:', {username, email, password});
     // Navigate to the nutritionist selection screen after successful signup
-    navigation.navigate('NutritionistSelection');
+    navigation.navigate('NutritionistLanding');
   };
 
   const toggleAgreement = () => {
