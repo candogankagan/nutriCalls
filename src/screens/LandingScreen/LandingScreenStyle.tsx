@@ -116,4 +116,18 @@ export const styles = StyleSheet.create({
     color: '#000',
     width: 80,
   },
+  dateInputButton: {
+    width: '80%',
+    padding: 15,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#D8D8D8',
+  },
+  dateText: {
+    fontSize: 16,
+    color: '#333',
+  },
 });

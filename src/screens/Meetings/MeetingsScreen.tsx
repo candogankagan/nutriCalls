@@ -15,15 +15,11 @@ const MeetingsScreen = () => {
   // Mock data for nutritionist
   const nutritionist = {
     name: 'Hasan Karadağ',
-    image: assets.doctor,
+    image: require('../../assets/images/20.png'),
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>NutriCalls</Text>
-      </View>
-
       <View style={styles.tabContainer}>
         <TouchableOpacity style={styles.activeTab}>
           <Text style={styles.activeTabText}>Planned Calls</Text>
@@ -74,7 +70,10 @@ const MeetingsScreen = () => {
                 <Text style={styles.dietPlanCardTitle}>Your Diet Plan</Text>
                 <Text style={styles.dietPlanCardSubtitle}>Click Here!</Text>
               </View>
-              <Image source={assets.dietPlan} style={styles.dietPlanImage} />
+              <Image
+                source={require('../../assets/images/35.png')}
+                style={styles.dietPlanImage}
+              />
             </View>
           </TouchableOpacity>
         </View>
@@ -248,7 +247,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   dietPlanImage: {
-    width: 80,
+    width: 180,
     height: 80,
     borderRadius: 5,
     backgroundColor: '#e0e0e0',

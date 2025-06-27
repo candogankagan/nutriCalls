@@ -9,7 +9,9 @@ import {
   SafeAreaView,
   ImageBackground,
   Image,
+  Platform,
 } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import {styles} from './LandingScreenStyle';
 
 const {width} = Dimensions.get('window');
@@ -72,7 +74,8 @@ const steps: Step[] = [
   },
   {
     type: 'input',
-    title: 'When are you more available for video calling to your nutritionist ?',
+    title:
+      'When are you more available for video calling to your nutritionist ?',
   },
 ];
 
@@ -80,6 +83,8 @@ const LandingScreen = ({navigation}: any) => {
   const flatListRef = useRef<FlatList>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleNext = () => {
     if (currentIndex < steps.length - 1) {
@@ -109,12 +114,10 @@ const LandingScreen = ({navigation}: any) => {
 
       {item.type === 'input' ? (
         <View style={styles.itemContainer}>
-          {index === 0 ? (
-            <Text style={styles.text}>Preferred Name</Text>
-          ) : null}
+          {index === 0 ? <Text style={styles.text}>Preferred Name</Text> : null}
 
           <TextInput
-            placeholder={index === 0 ? "Preferred Name" : "Enter your answer"}
+            placeholder={index === 0 ? 'Preferred Name' : 'Enter your answer'}
             style={styles.input}
             value={answers[index] || ''}
             onChangeText={text => handleSelect(index, text)}
@@ -124,44 +127,23 @@ const LandingScreen = ({navigation}: any) => {
         </View>
       ) : item.type === 'date' ? (
         <View style={styles.dateContainer}>
-          <View style={styles.dateRow}>
-            <TextInput
-              placeholder="DD"
-              style={styles.dateInput}
-              keyboardType="number-pad"
-              maxLength={2}
-              value={answers[index]?.split(' ')[0] || ''}
-              onChangeText={day => {
-                const month = answers[index]?.split(' ')[1] || '';
-                const year = answers[index]?.split(' ')[2] || '';
-                handleSelect(index, `${day} ${month} ${year}`);
-              }}
-            />
-            <TextInput
-              placeholder="MM"
-              style={styles.dateInput}
-              keyboardType="number-pad"
-              maxLength={2}
-              value={answers[index]?.split(' ')[1] || ''}
-              onChangeText={month => {
-                const day = answers[index]?.split(' ')[0] || '';
-                const year = answers[index]?.split(' ')[2] || '';
-                handleSelect(index, `${day} ${month} ${year}`);
-              }}
-            />
-            <TextInput
-              placeholder="YYYY"
-              style={styles.dateInput}
-              keyboardType="number-pad"
-              maxLength={4}
-              value={answers[index]?.split(' ')[2] || ''}
-              onChangeText={year => {
-                const day = answers[index]?.split(' ')[0] || '';
-                const month = answers[index]?.split(' ')[1] || '';
-                handleSelect(index, `${day} ${month} ${year}`);
-              }}
-            />
-          </View>
+          <DateTimePicker
+            value={selectedDate}
+            mode="date"
+            display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+            onChange={(event, date) => {
+              setShowDatePicker(Platform.OS === 'ios');
+              if (date) {
+                setSelectedDate(date);
+                const day = date.getDate().toString().padStart(2, '0');
+                const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                const year = date.getFullYear().toString();
+                const formattedDate = `${day} ${month} ${year}`;
+                handleSelect(index, formattedDate);
+              }
+            }}
+            maximumDate={new Date()}
+          />
         </View>
       ) : (
         <View style={styles.itemContainer}>

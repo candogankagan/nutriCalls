@@ -11,10 +11,6 @@ import BottomTabBar from '../../components/Core/BottomTabBar';
 const CameraScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>NutriCalls</Text>
-      </View>
-
       <View style={styles.content}>
         <Text style={styles.pageTitle}>Meetings</Text>
 

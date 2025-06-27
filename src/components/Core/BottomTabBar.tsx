@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {TabStackParamList} from '@/navigation/TabNavigator';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -34,10 +34,14 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({activeTab}) => {
       <TouchableOpacity
         style={styles.tabItem}
         onPress={() => navigateToScreen('home')}>
-        <Icon
-          name="home-outline"
-          size={24}
-          color={activeTab === 'home' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'}
+        <Image
+          source={
+            activeTab === 'home'
+              ? require('../../assets/images/121.png')
+              : require('../../assets/images/117.png')
+          }
+          style={{width: 24, height: 24}}
+          resizeMode="contain"
         />
         <Text
           style={[
@@ -51,12 +55,14 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({activeTab}) => {
       <TouchableOpacity
         style={styles.tabItem}
         onPress={() => navigateToScreen('meetings')}>
-        <Icon
-          name="view-grid-outline"
-          size={24}
-          color={
-            activeTab === 'meetings' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'
+        <Image
+          source={
+            activeTab === 'meetings'
+              ? require('../../assets/images/122.png')
+              : require('../../assets/images/118.png')
           }
+          style={{width: 24, height: 24}}
+          resizeMode="contain"
         />
         <Text
           style={[
@@ -70,18 +76,24 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({activeTab}) => {
       <TouchableOpacity
         style={styles.centerTab}
         onPress={() => navigateToScreen('camera')}>
-        <View style={styles.plusButton}>
-          <Icon name="plus" size={24} color="#8E24AA" />
-        </View>
+        <Image
+          source={require('../../assets/images/101.png')}
+          style={{width: 24, height: 24}}
+          resizeMode="contain"
+        />
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.tabItem}
         onPress={() => navigateToScreen('meals')}>
-        <Icon
-          name="food-apple-outline"
-          size={24}
-          color={activeTab === 'meals' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'}
+        <Image
+          source={
+            activeTab === 'meals'
+              ? require('../../assets/images/123.png')
+              : require('../../assets/images/119.png')
+          }
+          style={{width: 24, height: 24}}
+          resizeMode="contain"
         />
         <Text
           style={[
@@ -95,12 +107,14 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({activeTab}) => {
       <TouchableOpacity
         style={styles.tabItem}
         onPress={() => navigateToScreen('profile')}>
-        <Icon
-          name="account-outline"
-          size={24}
-          color={
-            activeTab === 'profile' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'
+        <Image
+          source={
+            activeTab === 'profile'
+              ? require('../../assets/images/124.png')
+              : require('../../assets/images/116.png')
           }
+          style={{width: 24, height: 24}}
+          resizeMode="contain"
         />
         <Text
           style={[

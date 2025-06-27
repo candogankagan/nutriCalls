@@ -14,10 +14,6 @@ import assets from '../../assets';
 const MealsScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>NutriCalls</Text>
-      </View>
-
       <ScrollView style={styles.content}>
         <View style={styles.nutritionSummary}>
           <View style={styles.summaryItem}>
@@ -44,7 +40,10 @@ const MealsScreen = () => {
         <View style={styles.mealSection}>
           <View style={styles.mealHeader}>
             <View style={styles.mealIconContainer}>
-              <Image source={assets.breakfast} style={styles.mealIcon} />
+              <Image
+                source={require('../../assets/images/96.png')}
+                style={styles.mealIcon}
+              />
             </View>
             <Text style={styles.mealTitle}>BREAKFAST</Text>
           </View>
@@ -57,7 +56,10 @@ const MealsScreen = () => {
         <View style={styles.mealSection}>
           <View style={styles.mealHeader}>
             <View style={styles.mealIconContainer}>
-              <Image source={assets.lunch} style={styles.mealIcon} />
+              <Image
+                source={require('../../assets/images/94.png')}
+                style={styles.mealIcon}
+              />
             </View>
             <Text style={styles.mealTitle}>LUNCH</Text>
           </View>
@@ -70,7 +72,10 @@ const MealsScreen = () => {
         <View style={styles.mealSection}>
           <View style={styles.mealHeader}>
             <View style={styles.mealIconContainer}>
-              <Image source={assets.dinner} style={styles.mealIcon} />
+              <Image
+                source={require('../../assets/images/94.png')}
+                style={styles.mealIcon}
+              />
             </View>
             <Text style={styles.mealTitle}>DINNER</Text>
           </View>
@@ -83,7 +88,10 @@ const MealsScreen = () => {
         <View style={styles.mealSection}>
           <View style={styles.mealHeader}>
             <View style={styles.mealIconContainer}>
-              <Image source={assets.snack} style={styles.mealIcon} />
+              <Image
+                source={require('../../assets/images/93.png')}
+                style={styles.mealIcon}
+              />
             </View>
             <Text style={styles.mealTitle}>SNACK</Text>
           </View>
@@ -96,7 +104,10 @@ const MealsScreen = () => {
         <View style={styles.mealSection}>
           <View style={styles.mealHeader}>
             <View style={styles.mealIconContainer}>
-              <Image source={assets.water} style={styles.mealIcon} />
+              <Image
+                source={require('../../assets/images/92.png')}
+                style={styles.mealIcon}
+              />
             </View>
             <Text style={styles.mealTitle}>WATER</Text>
           </View>

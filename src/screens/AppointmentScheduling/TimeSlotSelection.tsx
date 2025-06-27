@@ -315,7 +315,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     marginVertical: 8,
     borderWidth: 1,
-    borderColor: '#4CAF50',
+    // borderColor: '#4CAF50',
     borderRadius: 4,
     alignItems: 'center',
     justifyContent: 'center',
@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4CAF50',
   },
   timeSlotText: {
-    color: '#4CAF50',
+    // color: '#4CAF50',
     fontWeight: '500',
   },
   selectedTimeSlotText: {

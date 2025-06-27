@@ -63,30 +63,30 @@ const WelcomeScreen = () => {
           <TouchableOpacity
             style={styles.signUpButton}
             onPress={handleEmailSignUp}>
-            {/* <Image
-              source={require('../../assets/images/email-icon.png')}
+            <Image
+              source={require('../../assets/images/email.png')}
               style={styles.buttonIcon}
-            /> */}
+            />
             <Text style={styles.buttonText}>Sign up with e-mail</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.signUpButton}
             onPress={handleAppleSignUp}>
-            {/* <Image
-              source={require('../../assets/images/apple-icon.png')}
+            <Image
+              source={require('../../assets/images/apple.png')}
               style={styles.buttonIcon}
-            /> */}
+            />
             <Text style={styles.buttonText}>Sign up with Apple</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.signUpButton}
             onPress={handleGoogleSignUp}>
-            {/* <Image
-              source={require('../../assets/images/google-icon.png')}
+            <Image
+              source={require('../../assets/images/google.png')}
               style={styles.buttonIcon}
-            /> */}
+            />
             <Text style={styles.buttonText}>Sign up with Google</Text>
           </TouchableOpacity>
         </View>
