@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {TabStackParamList} from '@/navigation/TabNavigator';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 type TabName = keyof TabStackParamList;
 
@@ -24,46 +25,90 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({activeTab}) => {
     const screenName = tabNameMap[tabName];
     if (screenName) {
       // @ts-ignore - We know the screen name is valid
-      navigation.navigate('Main', { screen: screenName });
+      navigation.navigate('Main', {screen: screenName});
     }
   };
 
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        style={[styles.tabItem, activeTab === 'home' && styles.activeTabItem]}
+        style={styles.tabItem}
         onPress={() => navigateToScreen('home')}>
-        <Text style={styles.tabIcon}>🏠</Text>
+        <Icon
+          name="home-outline"
+          size={24}
+          color={activeTab === 'home' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'}
+        />
+        <Text
+          style={[
+            styles.tabLabel,
+            activeTab === 'home' && styles.activeTabLabel,
+          ]}>
+          Main
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[
-          styles.tabItem,
-          activeTab === 'meetings' && styles.activeTabItem,
-        ]}
+        style={styles.tabItem}
         onPress={() => navigateToScreen('meetings')}>
-        <Text style={styles.tabIcon}>📊</Text>
+        <Icon
+          name="view-grid-outline"
+          size={24}
+          color={
+            activeTab === 'meetings' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'
+          }
+        />
+        <Text
+          style={[
+            styles.tabLabel,
+            activeTab === 'meetings' && styles.activeTabLabel,
+          ]}>
+          Plan
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[styles.tabItem, activeTab === 'camera' && styles.activeTabItem]}
+        style={styles.centerTab}
         onPress={() => navigateToScreen('camera')}>
-        <Text style={styles.tabIcon}>➕</Text>
+        <View style={styles.plusButton}>
+          <Icon name="plus" size={24} color="#8E24AA" />
+        </View>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[styles.tabItem, activeTab === 'meals' && styles.activeTabItem]}
+        style={styles.tabItem}
         onPress={() => navigateToScreen('meals')}>
-        <Text style={styles.tabIcon}>🍎</Text>
+        <Icon
+          name="food-apple-outline"
+          size={24}
+          color={activeTab === 'meals' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'}
+        />
+        <Text
+          style={[
+            styles.tabLabel,
+            activeTab === 'meals' && styles.activeTabLabel,
+          ]}>
+          Meals
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[
-          styles.tabItem,
-          activeTab === 'profile' && styles.activeTabItem,
-        ]}
+        style={styles.tabItem}
         onPress={() => navigateToScreen('profile')}>
-        <Text style={styles.tabIcon}>👤</Text>
+        <Icon
+          name="account-outline"
+          size={24}
+          color={
+            activeTab === 'profile' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)'
+          }
+        />
+        <Text
+          style={[
+            styles.tabLabel,
+            activeTab === 'profile' && styles.activeTabLabel,
+          ]}>
+          Profile
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -72,26 +117,64 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({activeTab}) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    height: 60,
-    backgroundColor: 'white',
-    borderTopWidth: 1,
-    borderTopColor: '#e0e0e0',
+    height: 70,
+    backgroundColor: '#4CAF50',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
+    paddingBottom: 10,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: -3,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
   },
   tabItem: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical: 8,
   },
-  activeTabItem: {
-    borderTopWidth: 2,
-    borderTopColor: '#4CAF50',
+  centerTab: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: -30,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
-  tabIcon: {
-    fontSize: 24,
+  plusButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  tabLabel: {
+    fontSize: 12,
+    marginTop: 4,
+    color: 'rgba(255, 255, 255, 0.7)',
+  },
+  activeTabLabel: {
+    color: '#FFFFFF',
+    fontWeight: '600',
   },
 });
 
