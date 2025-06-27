@@ -13,15 +13,16 @@ import {
 import Button from '../../components/Core/Button';
 
 interface AppointmentConfirmationProps {
-  navigation: any;
-  route: any;
+  navigation: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  route: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 const AppointmentConfirmation: React.FC<AppointmentConfirmationProps> = ({
-  navigation,
+  _navigation: any,
   route,
 }) => {
-  const {selectedDates, selectedTimeSlots, nutritionist} = route.params;
+  // nutritionist not used on this screen currently
+  const {selectedDates, selectedTimeSlots} = route.params;
   const [isConfirmed, setIsConfirmed] = useState(false);
   const dispatch = useDispatch();
 

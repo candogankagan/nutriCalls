@@ -8,7 +8,7 @@ import {
   MultiModalTypes,
   PropsWithChildren,
   BaseValueLabelResponse,
-  BaseValueLabel
+  BaseValueLabel,
 } from './commonTypes.d';
 import { ListSheetProps } from './components/Core/listSheet';
 import { AuthStackParamList, MainStackParamList } from './route';
@@ -27,5 +27,5 @@ export type {
   MainStackParamList,
   MultiModalTypes,
   PropsWithChildren,
-  TokenDataType
+  TokenDataType,
 };

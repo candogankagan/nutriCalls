@@ -34,14 +34,14 @@ const CenterRow = {
   display: 'flex' as const,
   flexDirection: 'row' as const,
   justifyContent: 'center' as const,
-  alignItems: 'center' as const
+  alignItems: 'center' as const,
 };
 
 const CenterColumn = {
   display: 'flex' as const,
   flexDirection: 'row' as const,
   justifyContent: 'center' as const,
-  alignItems: 'center' as const
+  alignItems: 'center' as const,
 };
 
 export const CommonStyles = StyleSheet.create({
@@ -53,6 +53,6 @@ export const CommonStyles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    elevation: 5
-  }
+    elevation: 5,
+  },
 });

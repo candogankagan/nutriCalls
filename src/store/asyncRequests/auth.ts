@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import authServices from '@/services/auth.services';
 import { LocalResponse } from '@/types/API/BaseApi';
 import { LoginRequest, LoginResponse, TokenDataType } from '@/types/API/auth';

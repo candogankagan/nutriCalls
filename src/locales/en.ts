@@ -12,18 +12,18 @@ const translations = {
     bottomSheetHeader: 'Telefon veya şifreniz yanlış',
     bottomSheetMessage: 'Lütfen kullanıcı bilgilerinizi kontrol ederek tekrar giriş yapın',
     languageTurkish: 'Türkçe',
-    languageEnglish: 'English'
+    languageEnglish: 'English',
   },
   createPassword: {
     welcome: '{{name}},\nWelcome to Kobe',
-    message: 'You can create your password by entering the information below.'
+    message: 'You can create your password by entering the information below.',
   },
   forgotPassword: {
     headerText: 'Forgot Password',
     message: 'You can create your password by entering the information below.',
     updatePassword: 'Create Password',
     updateMessage: 'You can create your password by entering the information below.',
-    buttonText: 'Update Password'
+    buttonText: 'Update Password',
   },
   common: {
     rememberMe: 'Remember Me',
@@ -35,10 +35,10 @@ const translations = {
     continue: 'Devam Et',
     okey: 'Tamam',
     tryAgain: 'Try Again',
-    otp: 'SMS Verification'
+    otp: 'SMS Verification',
   },
   receiptModal: {
-    receiptNo: 'Dekont No'
+    receiptNo: 'Dekont No',
   },
   register: {
     layoutHeaderText: "Kobe'ye Başvur",
@@ -50,11 +50,11 @@ const translations = {
     exitModalMessage: 'Başvuru sürecini sonlandırmak üzeresiniz. Onaylıyor musunuz?',
     exitModalPrimaryButton: 'Onayla',
     exitModalSecondaryButton: 'Vazgeç',
-    monthlyPosTurnoverListTitle: 'Aylık POS Cironuz'
+    monthlyPosTurnoverListTitle: 'Aylık POS Cironuz',
   },
   transactionSummary: {
     header: 'İşlem Özeti',
-    text: 'Aşağıda yer alan bilgileri kontrol ederek başvuru işlemini onaylayabilirsiniz.'
+    text: 'Aşağıda yer alan bilgileri kontrol ederek başvuru işlemini onaylayabilirsiniz.',
   },
   inputHolders: {
     telephoneNumber: 'Cep Telefonu',
@@ -64,12 +64,12 @@ const translations = {
     mailAddress: 'E-Posta Adresi',
     companyWebsite: 'Firma Web Sitesi',
     monthlyPosTurnover: 'Aylık POS Cironuz',
-    companyCode: 'Kampanya Kodu (Opsiyonel)'
+    companyCode: 'Kampanya Kodu (Opsiyonel)',
   },
   getPayment: {
     layoutHeaderText: 'Ödeme Al',
-    enterAmount: 'Tutar Giriniz'
-  }
+    enterAmount: 'Tutar Giriniz',
+  },
 } as const;
 
 export default translations;

@@ -18,9 +18,9 @@ const initialState: AuthState = {
   tokenData: { jwtToken: '', expiration: '', refreshToken: '', userName: '' },
   credentials: {
     phoneNumber: '',
-    rememberMe: false
+    rememberMe: false,
   },
-  otpCode: ''
+  otpCode: '',
 };
 
 export const authSlice = createSlice({
@@ -45,13 +45,13 @@ export const authSlice = createSlice({
       state.tokenData = { jwtToken: '', expiration: '', refreshToken: '', userName: '' };
       state.credentials = { phoneNumber: '', rememberMe: false };
       state.otpCode = '';
-    }
+    },
   },
   extraReducers: builder => {
     // builder.addCase(getMonthlyPosTurnover.fulfilled, (state, action) => {
     //   if (action.payload.isSuccess && action.payload.data) state.monthlyPosTurnover = action.payload.data.valuesAndLabels;
     // });
-  }
+  },
 });
 
 export const GetAuthState = (state: RootState) => state.auth;

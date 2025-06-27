@@ -7,17 +7,17 @@ import { LocalLanguageType } from '@/types/commonTypes';
 export const LocalLanguages: LocalLanguageType = {
   0: { id: 0, text: 'Turkish', key: 'tr' },
   1: { id: 1, text: 'English', key: 'en' },
-  2: { id: 2, text: 'Arabic', key: 'ar' }
+  2: { id: 2, text: 'Arabic', key: 'ar' },
 };
 
 i18n.use(initReactI18next).init({
   resources: {
     tr: { translation: tr },
-    en: { translation: en }
+    en: { translation: en },
   },
   lng: 'tr',
   fallbackLng: 'tr',
-  compatibilityJSON: 'v4'
+  compatibilityJSON: 'v4',
 });
 
 export default { i18n };

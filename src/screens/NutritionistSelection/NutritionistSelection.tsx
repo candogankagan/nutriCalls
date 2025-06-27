@@ -179,7 +179,6 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
   },
   selectButton: {
-    backgroundColor: '#8E44AD',
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',

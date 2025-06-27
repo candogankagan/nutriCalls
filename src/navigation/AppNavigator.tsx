@@ -14,7 +14,7 @@ export type HomeStackParamList = {
 };
 
 const HomeStack = createNativeStackNavigator<HomeStackParamList>();
-function HomeStackNavigator() {
+export default function HomeStackNavigator() {
   return (
     <HomeStack.Navigator screenOptions={{headerShown: false}}>
       <HomeStack.Screen

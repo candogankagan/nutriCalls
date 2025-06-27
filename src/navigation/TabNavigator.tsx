@@ -17,8 +17,6 @@ export type TabStackParamList = {
   Profile: undefined;
 };
 
-type TabName = keyof TabStackParamList;
-
 const Tab = createBottomTabNavigator<TabStackParamList>();
 
 const TabNavigator = () => {

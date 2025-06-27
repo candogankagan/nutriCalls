@@ -1,4 +1,4 @@
-/* eslint-disable prefer-destructuring */
+
 import CoreText from '../Text';
 import {BASE_WIDTH, Colors, INPUT_HEIGHT, Normalize} from '../../../styles';
 import React from 'react';

@@ -2,7 +2,6 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {TabStackParamList} from '@/navigation/TabNavigator';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 type TabName = keyof TabStackParamList;
 
@@ -74,6 +73,7 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({activeTab}) => {
       </TouchableOpacity>
 
       <TouchableOpacity
+        activeOpacity={0.9}
         style={styles.centerTab}
         onPress={() => navigateToScreen('camera')}>
         <Image

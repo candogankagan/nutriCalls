@@ -1,6 +1,6 @@
 import { ViewStyle } from 'react-native';
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export type ThemedViewProps = {
   bgColor?: string;
   safeAreaColor?: string;

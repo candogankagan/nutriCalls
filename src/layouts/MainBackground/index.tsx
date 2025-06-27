@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { BASE__CONTAINER_PADDING, Normalize, SCREEN_WIDTH } from '@/styles';
 import * as React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
@@ -36,14 +36,14 @@ const MainBackgroundLayout = ({ children, customContainerStyle, onPressLanguageB
           {isLoggedIn ? (
             <View style={styles.imageContainer}>
               <View style={{ backgroundColor: theme.BLUE[100], ...styles.userProfile }}>
-                <CoreText color={theme.TEXT.KOBE_BLUE} text='AA' variant='labelSmall/medium' />
+                <CoreText color={theme.TEXT.KOBE_BLUE} text="AA" variant="labelSmall/medium" />
               </View>
             </View>
           ) : (
             <TouchableOpacity onPress={onPressLanguageButton} style={styles.buttonStyle}>
               {getLanguageIcon(language)}
-              <CoreText color='white' text={language.toLocaleUpperCase()} variant='labelXSmall/regular' />
-              <Dropdown stroke='#fff' />
+              <CoreText color="white" text={language.toLocaleUpperCase()} variant="labelXSmall/regular" />
+              <Dropdown stroke="#fff" />
             </TouchableOpacity>
           )}
         </View>
@@ -59,14 +59,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: BASE__CONTAINER_PADDING,
-    paddingTop: Normalize(70, 'height')
+    paddingTop: Normalize(70, 'height'),
   },
   imageContainer: {
     flexDirection: 'row',
     gap: 16,
     justifyContent: 'center',
     alignItems: 'center',
-    height: Normalize(32)
+    height: Normalize(32),
   },
   buttonStyle: {
     flexDirection: 'row',
@@ -74,14 +74,14 @@ const styles = StyleSheet.create({
     padding: 6,
     height: Normalize(32),
     borderRadius: 8,
-    backgroundColor: 'rgba(255, 255, 255, 0.16)'
+    backgroundColor: 'rgba(255, 255, 255, 0.16)',
   },
   userProfile: {
     width: Normalize(40),
     height: Normalize(40),
     borderRadius: 999,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   customView: {
     borderTopLeftRadius: 20,
@@ -89,17 +89,17 @@ const styles = StyleSheet.create({
     marginTop: Normalize(-85, 'height'),
     gap: Normalize(16, 'height'),
     padding: BASE__CONTAINER_PADDING,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   imageBg: {
     width: SCREEN_WIDTH,
     backgroundColor: 'red',
-    height: Normalize(210)
+    height: Normalize(210),
   },
   logo: {
     width: 141,
-    height: 24
-  }
+    height: 24,
+  },
 });
 
 export default MainBackgroundLayout;

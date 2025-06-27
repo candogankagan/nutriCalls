@@ -72,7 +72,9 @@ const AppointmentCalendar = ({navigation, route}: any) => {
 
   // Handle date selection
   const handleDateSelect = (day: number) => {
-    if (!day) return; // Skip empty days
+    if (!day) {
+      return;
+    } // Skip empty days
 
     if (selectedDates.includes(day)) {
       // Deselect the date
@@ -285,7 +287,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   continueButton: {
-    backgroundColor: '#8E44AD',
     paddingVertical: 15,
     paddingHorizontal: 30,
     width: '100%',
