@@ -9,22 +9,17 @@ import {
   ScrollView,
 } from 'react-native';
 import BottomTabBar from '../../components/Core/BottomTabBar';
-import assets from '../../assets';
 
 const ProfileScreen = () => {
   // Mock user data
   const user = {
     name: 'Sercan Fasulye',
     email: 'sercanfasulye@gmail.com',
-    image: assets.profile,
+    image: require('../../assets/images/78.png'),
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>NutriCalls</Text>
-      </View>
-
       <ScrollView style={styles.content}>
         <View style={styles.profileHeader}>
           <View style={styles.profileImageContainer}>
