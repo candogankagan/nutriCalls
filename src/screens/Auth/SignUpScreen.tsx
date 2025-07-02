@@ -8,6 +8,7 @@ import {
   Image,
   ImageBackground,
   TextInput,
+  Platform,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -122,6 +123,7 @@ const SignUpScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: Platform.OS === 'android' ? normalize(20, 'height') : 0,
     flex: 1,
   },
   safeArea: {

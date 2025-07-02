@@ -98,6 +98,27 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  dateButton: {
+    backgroundColor: '#800080',
+    padding: 15,
+    borderRadius: 8,
+    marginBottom: 20,
+    width: '80%',
+    alignItems: 'center',
+  },
+  dateButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  dateButtonDefault: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#800080',
+  },
+  dateButtonDefaultText: {
+    color: '#800080',
+  },
   dateRow: {
     flexDirection: 'row',
     justifyContent: 'center',

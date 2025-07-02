@@ -127,23 +127,45 @@ const LandingScreen = ({navigation}: any) => {
         </View>
       ) : item.type === 'date' ? (
         <View style={styles.dateContainer}>
-          <DateTimePicker
-            value={selectedDate}
-            mode="date"
-            display={Platform.OS === 'ios' ? 'spinner' : 'default'}
-            onChange={(event, date) => {
-              setShowDatePicker(Platform.OS === 'ios');
-              if (date) {
-                setSelectedDate(date);
-                const day = date.getDate().toString().padStart(2, '0');
-                const month = (date.getMonth() + 1).toString().padStart(2, '0');
-                const year = date.getFullYear().toString();
-                const formattedDate = `${day} ${month} ${year}`;
-                handleSelect(index, formattedDate);
-              }
-            }}
-            maximumDate={new Date()}
-          />
+          {Platform.OS === 'android' && (
+            <TouchableOpacity
+              style={[
+                styles.dateButton,
+                !answers[index] && styles.dateButtonDefault,
+              ]}
+              onPress={() => setShowDatePicker(true)}>
+              <Text
+                style={[
+                  styles.dateButtonText,
+                  !answers[index] && styles.dateButtonDefaultText,
+                ]}>
+                {answers[index] ? answers[index] : 'Select Date'}
+              </Text>
+            </TouchableOpacity>
+          )}
+          {(Platform.OS === 'ios' || showDatePicker) && (
+            <DateTimePicker
+              value={selectedDate || new Date()}
+              mode="date"
+              display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+              onChange={(event, date) => {
+                if (Platform.OS === 'android') {
+                  setShowDatePicker(false);
+                }
+                if (date) {
+                  setSelectedDate(date);
+                  const day = date.getDate().toString().padStart(2, '0');
+                  const month = (date.getMonth() + 1)
+                    .toString()
+                    .padStart(2, '0');
+                  const year = date.getFullYear().toString();
+                  const formattedDate = `${day} ${month} ${year}`;
+                  handleSelect(index, formattedDate);
+                }
+              }}
+              maximumDate={new Date()}
+            />
+          )}
         </View>
       ) : (
         <View style={styles.itemContainer}>

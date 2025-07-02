@@ -1,12 +1,5 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  FlatList,
-  SafeAreaView,
-} from 'react-native';
+import React from 'react';
+import {View, Text, Image, FlatList, SafeAreaView} from 'react-native';
 import {styles} from './NutritionistLandingStyle';
 import Button from '../../components/Core/Button';
 
