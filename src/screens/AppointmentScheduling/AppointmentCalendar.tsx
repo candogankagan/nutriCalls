@@ -3,11 +3,11 @@ import {
   View,
   Text,
   TouchableOpacity,
-  SafeAreaView,
   StyleSheet,
   Dimensions,
 } from 'react-native';
 import Button from '../../components/Core/Button';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const {width} = Dimensions.get('window');
 

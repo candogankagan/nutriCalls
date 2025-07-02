@@ -5,12 +5,12 @@ import {
   View,
   Text,
   TouchableOpacity,
-  SafeAreaView,
   StyleSheet,
   ScrollView,
   Image,
 } from 'react-native';
 import Button from '../../components/Core/Button';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 interface AppointmentConfirmationProps {
   navigation: any; // eslint-disable-line @typescript-eslint/no-explicit-any

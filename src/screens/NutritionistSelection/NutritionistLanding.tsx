@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, Text, Image, FlatList, SafeAreaView} from 'react-native';
+import {View, Text, Image, FlatList} from 'react-native';
 import {styles} from './NutritionistLandingStyle';
 import Button from '../../components/Core/Button';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const nutritionists = [
   {
@@ -30,7 +31,6 @@ const nutritionists = [
   },
 ];
 
-// Features list
 const features = [
   {
     id: '1',
@@ -64,7 +64,6 @@ const NutritionistLanding = ({navigation}: any) => {
     navigation.navigate('NutritionistSelection');
   };
 
-  // Render nutritionist circles in the layout shown in the image
   const renderNutritionistCircles = () => {
     return (
       <View style={styles.nutritionistsCircleContainer}>

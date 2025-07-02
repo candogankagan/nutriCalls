@@ -1,14 +1,8 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  Dimensions,
-} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 import {LineChart} from 'react-native-chart-kit';
 import BottomTabBar from '../../components/Core/BottomTabBar';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const screenWidth = Dimensions.get('window').width;
 

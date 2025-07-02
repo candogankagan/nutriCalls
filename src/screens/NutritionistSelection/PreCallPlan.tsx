@@ -1,14 +1,8 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  SafeAreaView,
-  StatusBar,
-} from 'react-native';
+import {View, Text, Image, StatusBar} from 'react-native';
 import {styles} from './PreCallPlanStyle';
 import Button from '../../components/Core/Button';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const PreCallPlan = ({route, navigation}: any) => {
   const {nutritionist} = route.params;
@@ -19,9 +13,8 @@ const PreCallPlan = ({route, navigation}: any) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" />
       <View style={styles.header}>
-        <Text style={styles.headerText}>lets make a pre-call plan</Text>
+        <Text style={styles.headerText}>Lets make a pre-call plan</Text>
       </View>
 
       <View style={styles.nutritionistContainer}>

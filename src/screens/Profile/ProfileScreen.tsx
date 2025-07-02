@@ -3,12 +3,12 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView,
   TouchableOpacity,
   Image,
   ScrollView,
 } from 'react-native';
 import BottomTabBar from '../../components/Core/BottomTabBar';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const ProfileScreen = () => {
   // Mock user data
@@ -101,7 +101,7 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#fff',
   },
   header: {
     padding: 15,

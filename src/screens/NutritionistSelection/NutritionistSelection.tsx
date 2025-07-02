@@ -5,10 +5,10 @@ import {
   Image,
   TouchableOpacity,
   FlatList,
-  SafeAreaView,
   StyleSheet,
 } from 'react-native';
 import Button from '../../components/Core/Button';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const nutritionists = [
   {

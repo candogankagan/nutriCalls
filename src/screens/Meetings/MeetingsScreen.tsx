@@ -3,13 +3,12 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView,
   TouchableOpacity,
   Image,
   ScrollView,
 } from 'react-native';
 import BottomTabBar from '../../components/Core/BottomTabBar';
-import assets from '../../assets';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const MeetingsScreen = () => {
   // Mock data for nutritionist

@@ -3,18 +3,19 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView,
   TouchableOpacity,
   Image,
   ScrollView,
 } from 'react-native';
 import BottomTabBar from '../../components/Core/BottomTabBar';
-import assets from '../../assets';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const MealsScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.content}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.content}>
         <View style={styles.nutritionSummary}>
           <View style={styles.summaryItem}>
             <Text style={styles.summaryValue}>2600</Text>
@@ -139,9 +140,13 @@ const styles = StyleSheet.create({
     color: '#333',
     textAlign: 'center',
   },
-  content: {
+  scrollView: {
     flex: 1,
+    marginBottom: 60,
+  },
+  content: {
     padding: 15,
+    flexGrow: 1,
   },
   nutritionSummary: {
     flexDirection: 'row',

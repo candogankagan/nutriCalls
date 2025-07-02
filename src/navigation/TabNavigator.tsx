@@ -1,6 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {getFocusedRouteNameFromRoute, useNavigationState} from '@react-navigation/native';
+import {
+  getFocusedRouteNameFromRoute,
+  useNavigationState,
+} from '@react-navigation/native';
 import DashboardScreen from '../screens/Dashboard/DashboardScreen';
 import MeetingsScreen from '../screens/Meetings/MeetingsScreen';
 import CameraScreen from '../screens/Camera/CameraScreen';
@@ -33,7 +36,12 @@ const TabNavigator = () => {
   };
 
   // Get the active tab based on the current route
-  const getActiveTab = (): 'home' | 'meetings' | 'camera' | 'meals' | 'profile' => {
+  const getActiveTab = ():
+    | 'home'
+    | 'meetings'
+    | 'camera'
+    | 'meals'
+    | 'profile' => {
     if (!navigationState) {
       return 'home';
     }
@@ -64,7 +72,7 @@ const TabNavigator = () => {
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarStyle: {display: 'none'}, // Hide the default tab bar
+          tabBarStyle: {display: 'none'},
         }}>
         <Tab.Screen name="Dashboard" component={DashboardScreen} />
         <Tab.Screen name="Meetings" component={MeetingsScreen} />
